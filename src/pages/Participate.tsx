@@ -28,7 +28,7 @@ const Participate: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen pt-24 pb-20 bg-white relative">
+        <div className="min-h-screen pt-52 pb-20 bg-white relative">
             {/* Subtle textured background overlay */}
             <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_30%_20%,rgba(220,38,38,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(220,38,38,0.08),transparent_50%)]" />
 
