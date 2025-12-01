@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  /* Light Theme Palette */
+  --color-primary-50: #f8fafc;
+  --color-primary-100: #f1f5f9;
+  --color-primary-500: #64748b;
+  --color-primary-900: #0f172a;
+
+  /* Accent Color (Red from Logo) */
+  --color-secondary-500: #dc2626;
+  --color-secondary-600: #b91c1c;
+
+  /* Text Colors */
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+}
+
+@layer base {
+  html {
+    /* scroll-behavior: smooth; - Removed to fix page load scroll issues */
+  }
+
+  body {
+    @apply antialiased text-[--color-text-main] bg-white;
+  }
+}

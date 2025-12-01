@@ -18,8 +18,9 @@ const Header: React.FC = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'O Formato', path: '/formato' },
+        { name: 'Formato', path: '/formato' },
         { name: 'Participe', path: '/participe' },
+        { name: 'Apoiadores', path: '/apoiadores' },
     ];
 
     return (
@@ -31,17 +32,20 @@ const Header: React.FC = () => {
         >
             <div className="container mx-auto px-4 flex justify-between items-center">
                 <Link to="/" className="flex items-center">
-                    <img src="/logo.png" alt="Cristão Empreendedor" className="h-12 w-auto" />
+                    <img
+                        src={location.pathname === '/' && !isScrolled ? "/logo-header-white.png" : "/logo-header.png"}
+                        alt="Cristão Empreendedor"
+                        className="h-36 w-auto transition-opacity duration-300"
+                    />
                 </Link>
 
-                {/* Desktop Nav */}
                 <nav className="hidden md:flex space-x-8">
                     {navLinks.map((link) => (
                         <Link
                             key={link.path}
                             to={link.path}
                             className={clsx(
-                                'text-sm font-medium transition-colors hover:text-secondary-500',
+                                'text-lg font-medium transition-colors hover:text-secondary-500',
                                 location.pathname === link.path ? 'text-primary-900 font-semibold' : 'text-gray-700'
                             )}
                         >
