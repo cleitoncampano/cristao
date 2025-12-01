@@ -17,7 +17,6 @@ const Header: React.FC = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
         { name: 'Formato', path: '/formato' },
         { name: 'Participe', path: '/participe' },
         { name: 'Apoiadores', path: '/apoiadores' },
@@ -30,7 +29,7 @@ const Header: React.FC = () => {
                 isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-4' : 'bg-transparent py-6'
             )}
         >
-            <div className="container mx-auto px-4 flex justify-between items-center">
+            <div className="container mx-auto px-4 flex justify-between md:justify-start md:gap-12 items-center">
                 <Link to="/" className="flex items-center">
                     <img
                         src={location.pathname === '/' && !isScrolled ? "/logo-header-white.png" : "/logo-header.png"}
